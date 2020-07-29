@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!--css-->
+	<link rel="stylesheet" type="text/css" href="css/bootstrap.min.css">
+	<link rel="stylesheet" href="css/simplebar.css" />
+	<link rel="stylesheet" type="text/css" href="css/slide-styles.css">
+</head>
+<style type="text/css">
+	.certificate-body {
+		
+	}
+</style>
+<body >
+	<div class="content-wrapper" data-simplebar>
+		<section class="full-height certificate-card">
+				<div class="certificate-card__header">
+					<a href="https://qseksolutions.com/healthandsafety/home.html" class="btn btn-blue">Return to course</a>
+					<button onclick="printDiv()" class="btn btn-right btn-blue">Print to Certificate</button>
+				</div>
+				<div id="DivIdToPrint">
+					<div  class="certificate-body" style="width: 100%; padding: 120px 20px; background-color: #fff; width: 100%; max-height: 842px; border: solid 1px #707070; max-width: 595px; margin: auto; margin-top: 30px; position: relative;">
+						<img src="images/certificate-bg.png" style="position: absolute; width: calc(100% - 40px); left: 20px; top: 20px; z-index: 0; height: calc(100% - 40px); object-fit: cover;" >
+						<table class="certificate-table" style="width: 100%; position: relative; z-index: 2;">
+							<thead>
+								<tr>
+									<th><h1 style=" color: #426341; font-size: 34px; font-weight: bold; text-align: center; margin-bottom: 0px;">Certificate of Completion</h1></th>
+								</tr>
+								<tr>
+									<th style=" color: #000; font-size: 18px; text-align: center;">in</th>
+								</tr>
+								<tr>
+									<th style=" color: #426341; font-size: 22px; text-align: center; padding-bottom: 30px; font-weight: 700;">Health and Safety</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td><h1 style="text-align: center; font-size: 32px; font-weight: bold; color: #426341; border-bottom: solid 2px #3c503a;">John Smith</h1></td>
+								</tr>
+								<tr>
+									<td style=" color: #426341; font-size: 18px; padding-bottom: 30px; text-align: center; font-weight: 600;">Archieved 95% through elearning portal on Jane 27th 2016</td>
+								</tr>
+								<tr>
+									<td style=" color: #426341; font-size: 14px; font-weight: 500; text-align: center;"><p style="margin-bottom: 0px;">The Course syllabus include, lesson 1, lesson 2, lesson 3, lesson 4, lesson 5,</p></td>
+								</tr>
+								<tr>
+									<td style=" color: #426341; font-size: 14px; font-weight: 500; padding-top: 30px; text-align: center;"><p style="margin-bottom: 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p></td>
+								</tr>
+								<tr>
+									<td style=" color: #426341; font-size: 14px; font-weight: 500; text-align: center;"><p style="margin-bottom: 0px;">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod</p></td>
+								</tr>
+								<tr>
+									<td style="padding-top: 100px; padding-bottom: 150px; color: #426341; font-size: 16px; font-weight: bold; text-align: center;">Course delivered via clearing portal.</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+					
+				</div>
+			</div>
+		</section>
+	</div>
+	<!--js-->
+	<script src="js/jquery-2.2.4.js"></script>
+	<script src="js/popper.min.js"></script>
+	<script src="js/bootstrap.min.js"></script>
+	<script src="js/simplebar.js"></script>
+	<script>
+		function printDiv() 
+		{
+
+		  var divToPrint=document.getElementById('DivIdToPrint');
+
+		  var newWin=window.open('','Print-Window');
+
+		  newWin.document.open();
+
+		  newWin.document.write('<html><body onload="window.print()">'+divToPrint.innerHTML+'</body></html>');
+
+		  newWin.document.close();
+
+		  setTimeout(function(){newWin.close();},10);
+
+		}
+	</script>
+</body>
+</html>

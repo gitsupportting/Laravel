@@ -1,0 +1,364 @@
+/* prefixed by https://autoprefixer.github.io (PostCSS: v7.0.23, autoprefixer: v9.7.3) */
+
+/*Fonts*/
+@import url('https://fonts.googleapis.com/css?family=Crimson+Text:400,400i,600,600i,700,700i&display=swap');
+
+/*Default style*/
+body {
+    font-family: 'Crimson Text', serif;
+    font-size: 16px;
+    color: #000000;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    min-height: 100vh;
+    overflow: hidden;
+    background-color: transparent;
+
+}
+.content-wrapper {
+    min-height: 100vh;
+    overflow: auto; 
+    width: 100%;
+    height: 1px;
+}
+.white-card {
+    background-color: #FFFFFF;
+}
+
+.lightgrey-card {
+    background-color: #F6F9FB;
+}
+
+.other-card {
+    background-color: #F6F9FB;
+}
+
+/*btn*/
+.btn {
+    font-weight: 700;
+    border-width: 3px;
+    line-height: 29px;
+    font-size: 18px;
+    padding: 6px 40px;
+    border-radius: 7px;
+}
+.btn-blue{
+    background-color: #2152c9;
+    color: #fff;
+    cursor: pointer;
+}
+.btn-blue:hover ,
+.btn-blue.focus, .btn-blue:focus{
+    -webkit-box-shadow: none;
+            box-shadow: none;
+    color: #fff;
+    background-color: #1444b7;
+}
+.btn-blue:not(:disabled):not(.disabled).active, .btn-blue:not(:disabled):not(.disabled):active, .show>.btn-blue.dropdown-toggle {
+    color: #fff;
+    border-color: #1444b7;
+    background-color: #1444b7;
+}
+.btn-blue.focus, .btn-blue:focus,
+.btn-blue:not(:disabled):not(.disabled).active:focus, .btn-blue:not(:disabled):not(.disabled):active:focus, .show>.btn-blue.dropdown-toggle:focus {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+/* custom checkbox*/
+.custom-control {
+    padding-left: 50px;
+}
+.custom-control-label {
+    font-size: 24px;
+    font-weight: 500;
+    line-height: 30px;
+    cursor: pointer;
+}
+.custom-control-label::before {
+    left: -50px;
+    width: 25px;
+    height: 25px;
+    border: #000 solid 2px;
+    top: 3px;
+}
+.custom-control-input:checked~.custom-control-label::before {
+    color: #000;
+    border-color: #000000;
+    background-color: #fff;
+}
+.custom-control-label::after {
+    position: absolute;
+    content: "";
+    top: 9px;
+    left: -44px;
+    display: block;
+    width: 13px;
+    height: 13px;
+    border-radius: 50%;
+}
+.custom-radio .custom-control-input:checked~.custom-control-label::after{
+    background-color: #000;
+    background-image: none;
+}
+.custom-control-input:focus~.custom-control-label::before {
+    -webkit-box-shadow: none;
+            box-shadow: none;
+}
+.custom-control-input:not(:disabled):active~.custom-control-label::before {
+    color: #fff;
+    background-color: transparent;
+    border-color: #000;
+}
+/*custom checkbox end*/
+
+/*Content Start*/
+.course-card {
+    padding: 70px;
+    height: 100%;
+}
+.course-content h3 {
+    font-size: 36px;
+    font-weight: 500;
+    margin-bottom: 30px;
+    color: #2A254F;
+}
+.step-card h4 {
+    text-align: left;
+    font-size: 20px;
+    color: #29264C;
+    font-weight: 700;
+    margin-bottom: 15px;
+    margin-top: 30px
+}
+.course-content p {
+    font-size: 22px;
+    font-weight: 500;
+    margin-bottom: 0px;
+}
+.step-card p {
+    font-size: 20px;
+    font-weight: 500;
+    color: #29264C;
+    line-height: 24px;
+}
+.page-title {
+    margin-top: 40px;
+    margin-bottom: 30px;
+}
+.page-title h1 {
+    font-size: 40px;
+    font-weight: 700;
+    margin-bottom: 0px;
+}
+.step-card h2 {
+    font-size: 60px;
+    text-align: center;
+    color: #2A254F;
+    margin-bottom: 30px;
+    font-weight: 600;
+    line-height: 60px;
+}
+.card-image {
+    background-color: #FF566E;
+    text-align: center;
+}
+
+.cardwhite-image {
+    background-color: #FFFFFF;
+    text-align: center;
+}
+.cardwhite-image img {
+    width: auto;
+    max-height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}
+
+.step-card--secound .card-image {
+    background-color: #00B9AB;
+}
+
+.card-image img {
+    width: auto;
+    max-height: 250px;
+    -o-object-fit: cover;
+       object-fit: cover;
+    -o-object-position: center;
+       object-position: center;
+}
+.step-card .card-body {
+    padding: 40px 40px 30px;
+}
+.step-card .card-video {
+    padding: 35px 50px 0px;
+    text-align: center;
+}
+.step-card .card-video iframe {
+    width: 850px;
+    height: 475px;
+}
+.single-image {
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: center;
+        -ms-flex-pack: center;
+            justify-content: center;
+    min-height: calc(100vh - 30px);
+}
+.question-card , .help-card {
+    height: 100%;
+}
+.question-card .card-body {
+    padding: 30px 60px;
+}
+.question-card .custom-control {
+    margin-bottom: 15px;
+}
+.certificate-card {
+    max-width: 760px;
+    margin: auto;
+    padding: 10px 0px;
+}
+.certificate-card__header {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+}
+.certi-img {
+    text-align: center;
+}
+.certi-img img {
+    width: 100%;
+}
+.simplebar-vertical .simplebar-scrollbar {
+    max-height: 430px;
+    top: 5%;
+}
+/*Content End*/
+@media (min-width: 768px) {
+    .container {
+        max-width: 100%;
+    }
+}
+@media (min-width: 992px) {
+    .container {
+        max-width: 100%;
+    }
+}
+@media (min-width: 1200px) {
+    .container {
+        max-width: 1170px;
+    }
+}
+@media (min-width: 1500px) {
+    .container {
+        max-width: 1500px;
+    }
+}
+@media (max-width: 991.98px) {
+    
+    .step-card .card-body {
+        padding: 30px 30px 70px;
+    }
+    .simplebar-scrollbar {
+        right: 12px;
+    }
+    .step-card .card-video {
+        padding: 25px 30px;
+    }
+    .question-card .card-body {
+        padding: 30px;
+    }
+    .step-card .card-video iframe {
+        width: 100%;
+        height: auto;
+    }
+    .course-card {
+        padding: 30px;
+    }
+}
+@media (max-width: 767.98px) {
+    .step-card .card-body {
+        padding: 20px 20px 50px;
+    }
+    .course-content h3, .step-card h3 {
+        font-size: 24px;
+        font-weight: 700;
+        margin-bottom: 15px;
+    }
+    .step-card p {
+        font-size: 18px;
+    }
+    .step-card .card-video {
+        padding: 15px 20px;
+    }
+    .question-card .card-body {
+        padding: 20px;
+    }
+    .step-card .card-video iframe {
+        width: 100%;
+        height: auto;
+    }
+    .course-card {
+        padding: 20px;
+    }
+    .custom-control-label {
+        font-size: 20px; 
+    }
+    .certificate-card {
+        padding: 10px;
+    }
+    .btn {
+        line-height: 30px;
+        font-size: 16px;
+        padding: 3px 12px;
+    }
+    .simplebar-scrollbar {
+        right: 8px;
+    }
+    .custom-control {
+        padding-left: 35px;
+    } 
+    .custom-control-label::before {
+        left: -35px;
+    }
+    .custom-control-label::after {
+        left: -29px;
+    }
+    .iframe-card iframe {
+        height: calc(100vh - 62px);
+    }
+    .simplebar-scrollbar:before {
+        width: 100%;
+    }
+    .simplebar-track {
+        right: 0px;
+    }
+    .step-card h2 {
+        font-size: 40px;
+        line-height: 40px;
+        margin-bottom: 15px;
+    }
+    .step-card h4 {
+        margin-bottom: 10px;
+        margin-top: 20px;
+    }
+}

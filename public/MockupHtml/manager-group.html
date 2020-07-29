@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manager Details</title>
+	<!--css-->
+	<link rel="shortcut icon" href="assets/images/favicon.png"> 
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/simplebar.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/datepicker.css"/>
+	<link rel="stylesheet" type="text/css" href="assets/css/datatables.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/Chart.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<header class="main-header">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg"> 
+				<a class="navbar-brand" href="#"><img src="assets/images/logo.svg" /> <span class="header-page__title">Wood Care Group</span></a>
+				<div class="navber__right ml-auto">
+					<div class="dropdown dropdown-header p-0">
+                        <button class="btn btn-dark-blue btn-square dropdown-toggle" type="button" id="employees-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Jane Smith</button>
+                        <ul class="list-unstyled dropdown-menu" aria-labelledby="employees-dropdown">
+                            <li><a class="dropdown-item" href="https://app.correctcare.co.uk/home">My Courses</a></li>
+                            <li> <button type="submit" class="dropdown-item">Sign Out</button> </li>
+                        </ul>
+                    </div>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="content-wrapper course-admin" data-simplebar>
+		<section class="section-overview container">
+			<div class="card card-chart">
+				<div class="card-header">
+					<h4 class="card-title">Group Overview</h4>
+					
+					<div class="dropdown select-dropdown">
+						<button class="btn btn-primary btn-square dropdown-toggle dropdown-placeholder" type="button" id="overview-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Completed and uncompleted courses </button>
+						<ul class="list-unstyled dropdown-menu" aria-labelledby="overview-dropdown">
+							<li><a class="dropdown-item"  href="#">Completed Uncompleted Courses</a></li>
+							<li><a class="dropdown-item"  href="#">External Completed Uncompleted</a></li>
+							<li><a class="dropdown-item" href="#">Policies Read & Accepted</a></li>
+						</ul>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="row chart-row collapse show" id="collapseChart">
+						<div class="col col-12 col-sm-12 col-md-4">
+							<div class="chart-box">
+								<canvas id="dChart1" class="canvas-chart"></canvas>		
+								<label class="label">Complete</label>
+								<h4 class="title">Broom Lane</h4>
+							</div>
+						</div>
+						<div class="col col-12 col-sm-12 col-md-4">
+							<div class="chart-box">
+								<canvas id="dChart2" class="canvas-chart"></canvas>		
+								<label class="label">Complete</label>
+								<h4 class="title">Longwood Lodge</h4>
+							</div>
+						</div>
+						<div class="col col-12 col-sm-12 col-md-4">
+							<div class="chart-box">
+								<canvas id="dChart3" class="canvas-chart"></canvas>		
+								<label class="label">Complete</label>
+								<h4 class="title">Riverside Lodge</h4>
+							</div>
+						</div>
+						<div class="col col-12 col-sm-12 col-md-4">
+							<div class="chart-box">
+								<canvas id="dChart4" class="canvas-chart"></canvas>		
+								<label class="label">Complete</label>
+								<h4 class="title">Riverside Lodge</h4>
+							</div>
+						</div>
+						<div class="col col-12 col-sm-12 col-md-4">
+							<div class="chart-box">
+								<canvas id="dChart5" class="canvas-chart"></canvas>		
+								<label class="label">Complete</label>
+								<h4 class="title">Broom Lane</h4>
+							</div>
+						</div>
+						<div class="col col-12 col-sm-12 col-md-4">
+							<div class="chart-box">
+								<canvas id="dChart6" class="canvas-chart"></canvas>		
+								<label class="label">Complete</label>
+								<h4 class="title">Longwood Lodge</h4>
+							</div>
+						</div>
+						<div class="col col-12 col-sm-12 col-md-4">
+							<div class="chart-box">
+								<canvas id="dChart7" class="canvas-chart"></canvas>		
+								<label class="label">Complete</label>
+								<h4 class="title">Riverside Lodge</h4>
+							</div>
+						</div>
+						<div class="col col-12 col-sm-12 col-md-4">
+							<div class="chart-box">
+								<canvas id="dChart8" class="canvas-chart"></canvas>		
+								<label class="label">Complete</label>
+								<h4 class="title">Riverside Lodge</h4>
+							</div>
+						</div>
+						<div class="col col-12 col-sm-12 col-md-4">
+							<div class="chart-box">
+								<canvas id="dChart9" class="canvas-chart"></canvas>		
+								<label class="label">Complete</label>
+								<h4 class="title">Riverside Lodge</h4>
+							</div>
+						</div>
+						<div class="col col-12 col-sm-12 col-md-4">
+							<div class="chart-box">
+								<canvas id="dChart10" class="canvas-chart"></canvas>		
+								<label class="label">Complete</label>
+								<h4 class="title">Riverside Lodge</h4>
+							</div>
+						</div>
+					</div>
+					<div class="text-center">
+						<button type="button" class="btn btn-primary btn-collapse mx-2" id="show_more_chart"><i class="fas fa-caret-down"></i></button>
+						<button type="button" class="btn btn-primary btn-collapse mx-2" data-toggle="collapse" id="collapse_link"><i class="fas fa-caret-up"></i></button>
+					</div>
+				</div>
+			</div>
+			<div class="card card-report">
+				<div class="card-header">
+					<h4 class="card-title">Organisation Reports</h4>
+					<div class="card-header__control">
+						<button class="btn btn-primary">Print</button>
+						<button class="btn btn-primary">Export</button>
+						<div class="dropdown select-dropdown">
+							<button class="btn btn-primary btn-square dropdown-toggle dropdown-placeholder" type="button" id="courses-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Uncompleted Courses </button>
+							<ul class="list-unstyled dropdown-menu" aria-labelledby="courses-dropdown">
+								<li><a class="dropdown-item"  href="#">Completed Courses</a></li>
+								<li><a class="dropdown-item"  href="#">Uncompleted Courses</a></li>
+								<li><a class="dropdown-item" href="#">Completed External</a></li>
+								<li><a class="dropdown-item" href="#">Uncompleted External</a></li>
+								<li><a class="dropdown-item" href="#">Policies Read & Accepted</a></li>
+								<li><a class="dropdown-item" href="#">Policies Not Read</a></li>
+							</ul>
+						</div>
+						<div class="dropdown select-dropdown">
+							<button class="btn btn-primary btn-square dropdown-toggle dropdown-placeholder" type="button" id="courses-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Broom Lane </button>
+							<ul class="list-unstyled dropdown-menu" aria-labelledby="courses-dropdown">
+								<li><a class="dropdown-item"  href="#">Longwood Lodge </a></li>
+								<li><a class="dropdown-item"  href="#">Riverside</a></li>
+								<li><a class="dropdown-item" href="#">Broom Lane</a></li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="card-body">
+					<div class="table-responsive">
+						<table class="table organisation-table report-table" id="organisation-reports-table">
+							<tbody>
+								<tr>
+									<th colspan="2">Julie Smith</th>
+								</tr>
+								<tr>
+									<td>Moving and Handling</td>
+									<td>Due 11/12/20</td>
+								</tr>
+								<tr>
+									<td>Covid19 Awareness</td>
+									<td>Due 09/12/20</td>
+								</tr>
+								<tr>
+									<td>Health and Safety</td>
+									<td>Due 11/12/20</td>
+								</tr>
+								<tr>
+									<td>Fire Safety</td>
+									<td>Due 10/12/20</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<th colspan="2">Janet Shaw</th>
+								</tr>
+								<tr>
+									<td>Moving and Handling</td>
+									<td>Due 11/12/20</td>
+								</tr>
+								<tr>
+									<td>Fire Safety</td>
+									<td>Due 11/12/20</td>
+								</tr>
+								<tr>
+									<td>Safeguarding Adults</td>
+									<td>Due 11/12/20</td>
+								</tr>
+								<tr>
+									<td>Covid19 Awareness</td>
+									<td>Due 11/12/20</td>
+								</tr>
+							</tbody>
+							<tbody>
+								<tr>
+									<th colspan="2">Boris Janeson</th>
+								</tr>
+								<tr>
+									<td>Covid19 Awarness</td>
+									<td>Due 11/12/20</td>
+								</tr>
+							</tbody>
+						</table>
+						<nav aria-label="Page navigation example">
+							<ul class="pagination justify-content-center">
+								<li class="page-item disabled"><a class="page-link" href="#">Previous</a></li>
+								<li class="page-item active"><a class="page-link" href="#">1</a></li>
+								<li class="page-item"><a class="page-link" href="#">2</a></li>
+								<li class="page-item"><a class="page-link" href="#">3</a></li>
+								<li class="page-item"><a class="page-link" href="#">Next</a></li>
+							</ul>
+						</nav>
+					</div>
+				</div>
+			</div>
+			<div class="card card-report">
+				<div class="card-header">
+					<h4 class="card-title">Send Email Reports</h4>
+				</div>
+				<div class="card-body pt-0">
+					<div class="email-report__filter">
+						<div class="email-report__filter--item">
+							<div class="dropdown select-dropdown">
+								<button class="btn btn-primary btn-square dropdown-toggle dropdown-placeholder" type="button" id="overview-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Uncompleted courses </button>
+								<ul class="list-unstyled dropdown-menu" aria-labelledby="overview-dropdown">
+									<li><a class="dropdown-item"  href="#">Completed Courses</a></li>
+									<li><a class="dropdown-item"  href="#">Uncompleted Courses</a></li>
+									<li><a class="dropdown-item"  href="#">External Uncompleted</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="email-report__filter--item">
+							<label class="label">To</label>
+							<input type="email" name="" class="form-control" placeholder="Email" />
+						</div>
+						<div class="email-report__filter--item">
+							<label class="label">On</label>
+							<div class="dropdown select-dropdown">
+								<button class="btn btn-primary btn-square dropdown-toggle dropdown-placeholder" type="button" id="overview-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">Monday </button>
+								<ul class="list-unstyled dropdown-menu" aria-labelledby="overview-dropdown">
+									<li><a class="dropdown-item"  href="#">Monday</a></li>
+									<li><a class="dropdown-item"  href="#">Tuesday</a></li>
+									<li><a class="dropdown-item"  href="#">Wednesday</a></li>
+									<li><a class="dropdown-item"  href="#">Tuesday</a></li>
+									<li><a class="dropdown-item"  href="#">Friday</a></li>
+									<li><a class="dropdown-item"  href="#">Saturday</a></li>
+									<li><a class="dropdown-item"  href="#">Sunday</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="email-report__filter--item">
+							<label class="label">At</label>
+							<div class="dropdown select-dropdown">
+								<button class="btn btn-primary btn-square dropdown-toggle dropdown-placeholder" type="button" id="overview-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">9:00 </button>
+								<ul class="list-unstyled dropdown-menu" aria-labelledby="overview-dropdown">
+									<li><a class="dropdown-item"  href="#">1:00</a></li>
+									<li><a class="dropdown-item"  href="#">2:00</a></li>
+									<li><a class="dropdown-item"  href="#">3:00</a></li>
+									<li><a class="dropdown-item"  href="#">4:00</a></li>
+									<li><a class="dropdown-item"  href="#">5:00</a></li>
+									<li><a class="dropdown-item"  href="#">6:00</a></li>
+									<li><a class="dropdown-item"  href="#">7:00</a></li>
+									<li><a class="dropdown-item"  href="#">8:00</a></li>
+									<li><a class="dropdown-item"  href="#">9:00</a></li>
+									<li><a class="dropdown-item"  href="#">10:00</a></li>
+									<li><a class="dropdown-item"  href="#">11:00</a></li>
+									<li><a class="dropdown-item"  href="#">12:00</a></li>
+								</ul>
+							</div>
+						</div>
+						<div class="email-report__filter--item">
+							<button class="btn btn-dark-blue btn-block">Add</button>
+						</div>
+					</div>
+					<div class="table-responsive">
+						<table class="table report-table send-email-table data-table" id="send_email_table">
+							<thead>
+								<tr>
+									<th scope="col">Report</th>
+									<th scope="col">To</th>
+									<th scope="col">On</th>
+									<th scope="col">At</th>
+									<th scope="col"></th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>Uncompleted Courses</td>
+									<td>Jenny@woodcaregroup.com</td>
+									<td> Monday</td>
+									<td>9:00</td>
+									<td class="text-right"><a href="#" class="link link-primary">Delete</a></td>
+								</tr>
+								<tr>
+									<td>Uncompleted Courses</td>
+									<td>Jenny@woodcaregroup.com</td>
+									<td> Monday</td>
+									<td>9:00</td>
+									<td class="text-right"><a href="#" class="link link-primary">Delete</a></td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="main-footer">
+			<div class="container">
+				<p class="copy-right"><svg xmlns="http://www.w3.org/2000/svg" width="9.86" height="10.068" viewBox="0 0 9.86 10.068"> <path id="Icon_metro-copyright" data-name="Icon metro-copyright" d="M12.152,10.608v.714a.839.839,0,0,1-.234.583,1.554,1.554,0,0,1-.6.4,4.341,4.341,0,0,1-.757.213,4.129,4.129,0,0,1-.754.072,2.936,2.936,0,0,1-2.2-.911,3.131,3.131,0,0,1-.883-2.268,3.049,3.049,0,0,1,.873-2.222A2.922,2.922,0,0,1,9.77,6.295a4.438,4.438,0,0,1,.485.029,4.066,4.066,0,0,1,.6.118,3.022,3.022,0,0,1,.594.223,1.284,1.284,0,0,1,.443.37.854.854,0,0,1,.18.531v.714a.092.092,0,0,1-.1.1h-.757a.092.092,0,0,1-.1-.1V7.822q0-.282-.42-.442A2.453,2.453,0,0,0,9.8,7.219a1.93,1.93,0,0,0-1.467.6,2.171,2.171,0,0,0-.568,1.557,2.337,2.337,0,0,0,.587,1.635,1.937,1.937,0,0,0,1.5.646,2.669,2.669,0,0,0,.886-.157q.449-.157.449-.433v-.459a.1.1,0,0,1,.029-.075.091.091,0,0,1,.067-.029h.764a.1.1,0,0,1,.071.029.1.1,0,0,1,.032.075ZM9.7,5.246a3.923,3.923,0,0,0-1.6.334,4.144,4.144,0,0,0-1.31.895,4.243,4.243,0,0,0-.876,1.337,4.215,4.215,0,0,0,0,3.258A4.243,4.243,0,0,0,6.8,12.407,4.145,4.145,0,0,0,8.1,13.3a3.973,3.973,0,0,0,3.19,0,4.145,4.145,0,0,0,1.31-.895,4.243,4.243,0,0,0,.876-1.337,4.216,4.216,0,0,0,0-3.258A4.243,4.243,0,0,0,12.6,6.475,4.145,4.145,0,0,0,11.3,5.58a3.923,3.923,0,0,0-1.6-.334Zm4.93,4.195A5.043,5.043,0,0,1,12.175,13.8a4.873,4.873,0,0,1-4.949,0A5.043,5.043,0,0,1,4.77,9.441,5.043,5.043,0,0,1,7.225,5.082a4.873,4.873,0,0,1,4.949,0A5.043,5.043,0,0,1,14.63,9.441Z" transform="translate(-4.77 -4.407)" fill="#d3d2d6"/></svg>Correct Care 2020 All Rights Reserved</p>
+			</div>
+		</footer>
+	</div>
+	<!--js-->
+	<script src="assets/js/jquery-2.2.4.js"></script>
+	<script src="assets/js/Chart.min.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/simplebar.js"></script>
+	<script src="assets/js/bootstrap-datepicker.js"></script>
+	<script src="assets/js/datatables.min.js"></script>
+	<script src="assets/js/slick.min.js"></script>
+	<script type="text/javascript">
+		
+		$('#send_email_table').DataTable( {
+			"bLengthChange" : false,
+			"bFilter": false,
+			"bInfo":false, 
+		});
+
+		for(var i=1; i<=10; i++){
+			var dChart = document.getElementById('dChart'+i);
+			var dataValues = '';
+			var centerText = '';
+			if(i==1){
+				dataValues = [70, 30];
+				centerText = '70%';
+
+			}else if(i==2){
+				dataValues = [74, 26];
+				centerText = '74%';
+			}else if(i==3){
+				dataValues = [81, 19];
+				centerText = '81%';
+			}else if(i==4){
+				dataValues = [81, 19];
+				centerText = '81%';
+			}else if(i==5){
+				dataValues = [70, 30];
+				centerText = '70%';
+			}else if(i==6){
+				dataValues = [74, 26];
+				centerText = '74%';
+			}else if(i==7){
+				dataValues = [81, 19];
+				centerText = '81%';
+			}else if(i==8){
+				dataValues = [81, 19];
+				centerText = '81%';
+			}else if(i==9){
+				dataValues = [81, 19];
+				centerText = '81%';
+			}else if(i==10){
+				dataValues = [81, 19];
+				centerText = '81%';
+			}
+	    	if(dChart){
+				var data = {
+					labels: [
+						"Completed",
+					    "Not Completed"
+					],
+					datasets: [
+					{
+						data: dataValues,
+						backgroundColor: [
+						"#1F78B4",
+						"#A6CEE3",
+						],
+						hoverBackgroundColor: []
+					}]
+				};
+				var promisedDeliveryChart = new Chart(document.getElementById('dChart'+i), {
+					type: 'doughnut',
+					data: data,
+					options: {
+						elements: {
+							center: {
+				                text: centerText  //set as you wish
+				            },
+							arc: {
+								borderWidth: 0
+							}
+						},
+						cutoutPercentage: 70,
+						segmentShowStroke: false,
+						responsive: false,
+						responsive: true,
+			        	maintainAspectRatio : false,
+						legend: {
+							display: false
+						}
+					}
+				});
+			}
+		}
+
+		Chart.pluginService.register({
+		    beforeDraw: function (chart) {
+		        var width = chart.chart.width,
+		            height = chart.chart.height,
+		            ctx = chart.chart.ctx;
+		        ctx.restore();
+		        var fontSize = (height / 114).toFixed(2);
+		        ctx.font = fontSize + "em sans-serif";
+		        ctx.textBaseline = "middle";
+		        ctx.fillStyle = "#1F78B4";
+		        var text = chart.config.options.elements.center.text,
+		            textX = Math.round((width - ctx.measureText(text).width) / 2),
+		            textY = height / 2;
+		        ctx.fillText(text, textX, textY);
+		        ctx.save();
+		    }
+		});
+
+	    $(document).on('click', '#show_more_chart', function(){
+    		$('#collapseChart').collapse('show');
+			if ($('#collapseChart').hasClass('show')) {
+	    		$(this).closest('.card-body').find('.chart-row .col:not(:nth-child(-n+5))').slideDown();
+		    	$('#collapseChart').addClass('show-more');
+			}
+		});
+	    $(document).on('click', '#collapse_link', function(){
+			if ($('#collapseChart').hasClass('show-more')) {
+	    		$(this).closest('.card-body').find('.chart-row .col:not(:nth-child(-n+5))').slideUp();
+			}else {
+	    		$('#collapseChart').collapse('hide');
+			}
+		    $('#collapseChart').removeClass('show-more');
+	    });
+	</script>
+	<script src="assets/js/custom.js"></script>
+	
+</body>
+</html>

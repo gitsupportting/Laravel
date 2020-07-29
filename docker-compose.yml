@@ -1,0 +1,56 @@
+version: '3'
+
+services:
+    server:
+        image: nginx:latest
+        ports:
+            - "8083:8081"
+            - "4434:443"
+        volumes:
+            - ./:/usr/share/nginx/html:delegated
+            - ./docker/nginx/site.conf:/etc/nginx/conf.d/default.conf
+        links:
+            - php
+            - database
+    php:
+        build: ./docker/php
+        volumes:
+            - ./:/usr/share/nginx/html:delegated
+        working_dir: /usr/share/nginx/html
+        tty: true
+        ports:
+            - "49159:22"
+        links:
+          - database
+          - mailhog
+          - redis
+    horizon:
+        build: ./docker/php
+        command: /usr/share/nginx/html/artisan horizon
+        volumes:
+            - ./:/usr/share/nginx/html:delegated
+        links:
+            - database
+            - mailhog
+            - redis
+        restart: always
+    database:
+        image: mariadb:10.3
+        volumes:
+          - data:/var/lib/mysql
+        environment:
+            MYSQL_ROOT_PASSWORD: "care123"
+            MYSQL_DATABASE: "care-training"
+            MYSQL_USER: "care-training"
+            MYSQL_PASSWORD: "care123"
+        ports:
+            - "3307:3306"
+    redis:
+        image: redis:latest
+    mailhog:
+        image: mailhog/mailhog:latest
+        restart: always
+        ports:
+            - "8055:8025"
+volumes:
+    data:

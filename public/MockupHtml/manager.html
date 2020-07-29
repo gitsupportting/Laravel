@@ -1,0 +1,434 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Manager</title>
+	<!--css-->
+	<link rel="shortcut icon" href="assets/images/favicon.png"> 
+	<link rel="stylesheet" type="text/css" href="assets/css/font-awesome.min.css">
+
+	<link rel="stylesheet" type="text/css" href="assets/css/bootstrap.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/owl.carousel.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/simplebar.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/datatables.min.css">
+	<link rel="stylesheet" type="text/css" href="assets/css/style.css">
+</head>
+<body>
+	<header class="main-header">
+		<div class="container">
+			<nav class="navbar navbar-expand-lg"> 
+				<a class="navbar-brand" href="#"><img src="assets/images/logo.svg" /> <span class="header-page__title">Ashgrove House Care</span></a>
+				<div class="navber__right ml-auto">
+					<button class="btn btn-primary btn-menu d-lg-none"></button> 
+					<span class="name">Sarah Manager</span>
+					<button class="btn btn-primary btn-logout">Logout</button>
+				</div>
+			</nav>
+		</div>
+	</header>
+	<div class="content-wrapper course-admin" data-simplebar>
+		<section class="section-manager">
+			<div class="container">
+				<div class="section-manager__content ">
+					<ul class="nav nav-tabs" id="myTab" role="tablist">
+						<li class="nav-item">
+							<a class="nav-link active" id="all-staff-tab" data-toggle="tab" href="#all-staff" role="tab" aria-controls="all-staff" aria-selected="true">All Staff</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="all-course-tab" data-toggle="tab" href="#all-course" role="tab" aria-controls="all-course" aria-selected="false">All Courses</a>
+						</li>
+						<li class="nav-item">
+							<a class="nav-link" id="setting-tab" data-toggle="tab" href="#setting" role="tab" aria-controls="setting" aria-selected="false">Settings</a>
+						</li>
+					</ul>
+					<div class="tab-content" id="myTabContent">
+						<div class="tab-pane fade show active" id="all-staff" role="tabpanel" aria-labelledby="all-staff-tab">
+							<div class="table-card">
+								<div class="table-control--top">
+									<div class="table-control__inner">
+										<div class="dropdown dropdown-employees">
+											<button class="btn btn-primary btn-square dropdown-toggle" type="button" id="employees-dropdown" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"> Employees </button>
+											<ul class="list-unstyled dropdown-menu" aria-labelledby="employees-dropdown">
+												<li><a class="dropdown-item"  href="add-employee.html">Add Employee</a></li>
+												<li><a class="dropdown-item" href="#">Import Employees</a></li>
+												<li><a class="dropdown-item" href="javascript:;" id="reveal-pass-link">Reveal Passwords</a></li>
+												<li><a class="dropdown-item" href="#">Archive Employee</a></li>
+												<li><a class="dropdown-item" href="#">Past Employees</a></li>
+											</ul>
+										</div>
+										<button class="btn btn-primary btn-square" data-toggle="modal" data-target="#assign-course">Assign Course</button>
+										<a href="training-matrix.html" target="_blank" class="btn btn-primary btn-square">Training Matrix</a>
+									</div>
+								</div>
+								<div class="table-responsive">
+									<table class="table manager-table data-table" id="all-staff-table">
+										<thead>
+											<tr>
+												<th scope="col"></th>
+												<th scope="col">Frist Name</th>
+												<th scope="col">Last Name</th>
+												<th scope="col">DOB</th>
+												<th scope="col">Username</th>
+												<th scope="col">Completed</th>
+												<th scope="col"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck">
+														<label class="custom-control-label" for="tablecheck"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Andrew</a></td>
+												<td>Wood</td>
+												<td>20/03/2019</td>
+												<td>awood1</td>
+												<td>0 of 1</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck2">
+														<label class="custom-control-label" for="tablecheck2"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Jenny</a></td>
+												<td>Wood</td>
+												<td>01/01/1976</td>
+												<td>jwood</td>
+												<td>0 of 0</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck3">
+														<label class="custom-control-label" for="tablecheck3"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Joe</a></td>
+												<td>Test</td>
+												<td>12/01/1972</td>
+												<td>jtest</td>
+												<td>0 of 0</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck4">
+														<label class="custom-control-label" for="tablecheck4"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Joe</a></td>
+												<td>Test</td>
+												<td>12/01/1972</td>
+												<td>jtest</td>
+												<td>0 of 0</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck5">
+														<label class="custom-control-label" for="tablecheck5"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Joe</a></td>
+												<td>Test</td>
+												<td>12/01/1972</td>
+												<td>jtest</td>
+												<td>0 of 0</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck6">
+														<label class="custom-control-label" for="tablecheck6"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Joe</a></td>
+												<td>Test</td>
+												<td>12/01/1972</td>
+												<td>jtest</td>
+												<td>0 of 0</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck7">
+														<label class="custom-control-label" for="tablecheck7"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Joe</a></td>
+												<td>Test</td>
+												<td>12/01/1972</td>
+												<td>jtest</td>
+												<td>0 of 0</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck8">
+														<label class="custom-control-label" for="tablecheck8"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Joe</a></td>
+												<td>Test</td>
+												<td>12/01/1972</td>
+												<td>jtest</td>
+												<td>0 of 0</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck9">
+														<label class="custom-control-label" for="tablecheck9"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Jenny</a></td>
+												<td>Wood</td>
+												<td>01/01/1976</td>
+												<td>jwood</td>
+												<td>0 of 0</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck10">
+														<label class="custom-control-label" for="tablecheck10"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Joe</a></td>
+												<td>Test</td>
+												<td>12/01/1972</td>
+												<td>jtest</td>
+												<td>0 of 0</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck11">
+														<label class="custom-control-label" for="tablecheck11"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Joe</a></td>
+												<td>Test</td>
+												<td>12/01/1972</td>
+												<td>jtest</td>
+												<td>0 of 0</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck12">
+														<label class="custom-control-label" for="tablecheck12"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Joe</a></td>
+												<td>Test</td>
+												<td>12/01/1972</td>
+												<td>jtest</td>
+												<td>0 of 0</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="tablecheck13">
+														<label class="custom-control-label" for="tablecheck13"></label>
+													</div>
+												</td>
+												<td><a href="manager-details.html" >Andrew</a></td>
+												<td>Wood</td>
+												<td>20/03/2019</td>
+												<td>awood1</td>
+												<td>0 of 1</td>
+												<td><button class="btn btn-blue btn-edit">Edit</button></td>
+											</tr>
+											
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="all-course" role="tabpanel" aria-labelledby="all-course-tab">
+							<div class="table-card">
+								<div class="table-responsive">
+									<table class="table manager-table" id="all-course-table"> 
+										<thead>
+											<tr>
+												<th></th>
+												<th scope="col">Course Name</th>
+												<th scope="col">Enrolled Employees</th>
+												<th scope="col">completed</th>
+												<th scope="col"></th>
+											</tr>
+										</thead>
+										<tbody>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="ac-checkbox1">
+														<label class="custom-control-label" for="ac-checkbox1"></label>
+													</div>
+												</td>
+												<td><a href="course-profile.html">Dementia Care</a></td>
+												<td>1</td>
+												<td>0</td>
+												<td><button class="btn btn-blue btn-employee" data-toggle="modal" data-target="#assign-employee">Assign Employee</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="ac-checkbox2">
+														<label class="custom-control-label" for="ac-checkbox2"></label>
+													</div>
+												</td>
+												<td><a href="course-profile.html">Hand Hygiene</a></td>
+												<td>0</td>
+												<td>0</td>
+												<td><button class="btn btn-blue btn-employee" data-toggle="modal" data-target="#assign-employee">Assign Employee</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="ac-checkbox3">
+														<label class="custom-control-label" for="ac-checkbox3"></label>
+													</div>
+												</td>
+												<td><a href="course-profile.html">Infection Control</a></td>
+												<td>0</td>
+												<td>0</td>
+												<td><button class="btn btn-blue btn-employee" data-toggle="modal" data-target="#assign-employee">Assign Employee</button></td>
+											</tr>
+											<tr>
+												<th scope="row">
+													<div class="custom-control custom-checkbox">
+														<input type="checkbox" class="custom-control-input" id="ac-checkbox4">
+														<label class="custom-control-label" for="ac-checkbox4"></label>
+													</div>
+												</td>
+												<td><a href="course-profile.html">Principles of Care and Confidentiality</a></td>
+												<td>0</td>
+												<td>0</td>
+												<td><button class="btn btn-blue btn-employee" data-toggle="modal" data-target="#assign-employee">Assign Employee</button></td>
+											</tr>
+										</tbody>
+									</table>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade settings" id="setting" role="tabpanel" aria-labelledby="setting-tab">...</div>
+					</div>
+				</div>
+			</div>
+		</section>
+		<footer class="main-footer">
+			<div class="container">
+				<p class="copy-right"><svg xmlns="http://www.w3.org/2000/svg" width="9.86" height="10.068" viewBox="0 0 9.86 10.068"> <path id="Icon_metro-copyright" data-name="Icon metro-copyright" d="M12.152,10.608v.714a.839.839,0,0,1-.234.583,1.554,1.554,0,0,1-.6.4,4.341,4.341,0,0,1-.757.213,4.129,4.129,0,0,1-.754.072,2.936,2.936,0,0,1-2.2-.911,3.131,3.131,0,0,1-.883-2.268,3.049,3.049,0,0,1,.873-2.222A2.922,2.922,0,0,1,9.77,6.295a4.438,4.438,0,0,1,.485.029,4.066,4.066,0,0,1,.6.118,3.022,3.022,0,0,1,.594.223,1.284,1.284,0,0,1,.443.37.854.854,0,0,1,.18.531v.714a.092.092,0,0,1-.1.1h-.757a.092.092,0,0,1-.1-.1V7.822q0-.282-.42-.442A2.453,2.453,0,0,0,9.8,7.219a1.93,1.93,0,0,0-1.467.6,2.171,2.171,0,0,0-.568,1.557,2.337,2.337,0,0,0,.587,1.635,1.937,1.937,0,0,0,1.5.646,2.669,2.669,0,0,0,.886-.157q.449-.157.449-.433v-.459a.1.1,0,0,1,.029-.075.091.091,0,0,1,.067-.029h.764a.1.1,0,0,1,.071.029.1.1,0,0,1,.032.075ZM9.7,5.246a3.923,3.923,0,0,0-1.6.334,4.144,4.144,0,0,0-1.31.895,4.243,4.243,0,0,0-.876,1.337,4.215,4.215,0,0,0,0,3.258A4.243,4.243,0,0,0,6.8,12.407,4.145,4.145,0,0,0,8.1,13.3a3.973,3.973,0,0,0,3.19,0,4.145,4.145,0,0,0,1.31-.895,4.243,4.243,0,0,0,.876-1.337,4.216,4.216,0,0,0,0-3.258A4.243,4.243,0,0,0,12.6,6.475,4.145,4.145,0,0,0,11.3,5.58a3.923,3.923,0,0,0-1.6-.334Zm4.93,4.195A5.043,5.043,0,0,1,12.175,13.8a4.873,4.873,0,0,1-4.949,0A5.043,5.043,0,0,1,4.77,9.441,5.043,5.043,0,0,1,7.225,5.082a4.873,4.873,0,0,1,4.949,0A5.043,5.043,0,0,1,14.63,9.441Z" transform="translate(-4.77 -4.407)" fill="#d3d2d6"/></svg>Correct Care 2020 All Rights Reserved</p>
+			</div>
+		</footer>
+	</div>
+	
+	<div class="modal modal-theme fade" id="assign-course" tabindex="-1" role="dialog" aria-labelledby="assign-courseLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="assign-courseLabel">Assign a Course</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label>Click the arrow below to select a course and then click Assign.</label>
+						<select class="custom-select form-control" id="inputGroupSelect01">
+							<option selected>Please Click the Course...</option>
+							<option value="1">Health and Safety</option>
+							<option value="2">Medicine</option>
+							<option value="3">Lifting and Handling</option>
+							<option value="4">First Aid</option>
+							<option value="5">Fire Safety</option>
+						</select>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary btn-square" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary btn-square">Assign</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="modal modal-theme fade" id="assign-employee" tabindex="-1" role="dialog" aria-labelledby="assign-employeeLabel" aria-hidden="true">
+		<div class="modal-dialog" role="document">
+			<div class="modal-content">
+				<div class="modal-header">
+					<h5 class="modal-title" id="assign-employeeLabel">Assign Employee</h5>
+					<button type="button" class="close" data-dismiss="modal" aria-label="Close">
+						<span aria-hidden="true">&times;</span>
+					</button>
+				</div>
+				<div class="modal-body">
+					<div class="form-group">
+						<label>Click the arrow below to select a course and then click Assign.</label>
+						<select class="custom-select form-control" id="inputGroupSelect01">
+							<option selected>Staff names..</option>
+							<option value="1">Dementia Care</option>
+							<option value="2">Hand Hygiene</option>
+							<option value="3">Infection Control</option>
+							<option value="4">Principles of Care and Confidentiality</option>
+						</select>
+					</div>
+				</div>
+				<div class="modal-footer">
+					<button type="button" class="btn btn-secondary btn-square" data-dismiss="modal">Close</button>
+					<button type="button" class="btn btn-primary btn-square">Assign</button>
+				</div>
+			</div>
+		</div>
+	</div>
+	<!--js-->
+	<script src="assets/js/jquery-2.2.4.js"></script>
+	<script src="assets/js/popper.min.js"></script>
+	<script src="assets/js/bootstrap.min.js"></script>
+	<script src="assets/js/owl.carousel.min.js"></script>
+	<script src="assets/js/datatables.min.js"></script>
+	<script src="assets/js/simplebar.js"></script>
+	<script src="assets/js/custom.js"></script>
+	<script type="text/javascript">
+		$('#all-staff-table').DataTable( {
+			responsive: true,
+			"bLengthChange" : false,
+			"bFilter": false,
+			"bInfo":false, 
+			"aaSorting": [],
+			columnDefs: [
+				{bSortable: false, targets: [0,6]} 
+			]
+		});
+		$('#all-course-table').DataTable( {
+			responsive: true,
+			"bLengthChange" : false,
+			"bFilter": false,
+			"bInfo":false, 
+			"aaSorting": [],
+			columnDefs: [
+				{bSortable: false, targets: [0,4]} 
+			]
+		});
+	</script>
+</body>
+</html>
